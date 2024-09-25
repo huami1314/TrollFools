@@ -1,0 +1,165 @@
+/* No comment provided by engineer. */
+“%@ exited with code %d” = “%@ đã thoát với mã %d”;
+
+/* No comment provided by engineer. */
+“%@ terminated with signal %d” = “%@ kết thúc với tín hiệu %d”;
+
+/* No comment provided by engineer. */
+“A pure TrollStore software channel!” = “Kênh TrollStore Thuần Tuý”;
+
+/* No comment provided by engineer. */
+“Advanced Settings” = “Cài Đặt Nâng Cao”;
+
+/* No comment provided by engineer. */
+“AE86 TrollStore Channel” = “AE86 TrollStore Channel”;
+
+/* No comment provided by engineer. */
+“And %d more unsupported user applications.” = “Và %d ứng dụng người dùng khác không được hỗ trợ.”;
+
+/* No comment provided by engineer. */
+“Completed” = “Hoàn Thành”;
+
+/* No comment provided by engineer. */
+“Copyright” = “Bản Quyền”;
+
+/* No comment provided by engineer. */
+“Eject” = “Đẩy Ra”;
+
+/* No comment provided by engineer. */
+“Eject All” = “Đẩy Ra Tất Cả”;
+
+/* No comment provided by engineer. */
+“Error” = “Lỗi”;
+
+/* No comment provided by engineer. */
+“Failed” = “Thất Bại”;
+
+/* No comment provided by engineer. */
+“Failed to find entry CFBundleExecutable in: %@“ = “Không tìm thấy mục CFBundleExecutable trong: %@“;
+
+/* No comment provided by engineer. */
+“Failed to locate main executable: %@“ = “Không thể xác định vị trí thực thi chính: %@“;
+
+/* No comment provided by engineer. */
+“Failed to parse: %@“ = “Không thể phân tích cú pháp: %@“;
+
+/* No comment provided by engineer. */
+“If you do not know what these options mean, please do not change them.” = “Nếu bạn không biết ý nghĩa của các tùy chọn này, vui lòng không thay đổi chúng.”;
+
+/* No comment provided by engineer. */
+“Inject” = “Tiêm”;
+
+/* No comment provided by engineer. */
+“Injectable System Applications” = “Ứng dụng hệ thống tiêm”;
+
+/* No comment provided by engineer. */
+“Injected Plug-Ins” = “Plug-Ins được đưa vào”;
+
+/* No comment provided by engineer. */
+“Injecting” = “Đang Tiêm”;
+
+/* No comment provided by engineer. */
+“Injection” = “Tiêm”;
+
+/* No comment provided by engineer. */
+“Launch” = “Launch”;
+
+/* No comment provided by engineer. */
+“Lessica, Lakr233, mlgm and other contributors.” = “Lessica, Lakr233, mlgm và những người đóng góp khác.”;
+
+/* No comment provided by engineer. */
+“Lock Version” = “Phiên bản Khoá”;
+
+/* No comment provided by engineer. */
+“No eligible framework found.” = “Không tìm thấy khung đủ điều kiện.”;
+
+/* No comment provided by engineer. */
+“No Injected Plug-Ins” = “Không có Plug-Ins nào được đưa vào”;
+
+/* No comment provided by engineer. */
+“No valid plug-ins found.” = “Không tìm thấy Plug-Ins hợp lệ.”;
+
+/* No comment provided by engineer. */
+“Not the first, but the best phone call recorder with TrollStore.” = “Không phải là ứng dụng ghi âm cuộc gọi điện thoại đầu tiên nhưng tốt nhất với TrollStore.”;
+
+/* No comment provided by engineer. */
+“Only removable system applications are eligible and listed.” = “Chỉ các ứng dụng hệ thống di động mới đủ điều kiện và được liệt kê.”;
+
+/* No comment provided by engineer. */
+“Patched” = “Đã Vá”;
+
+/* No comment provided by engineer. */
+“Pinned Version” = “Phiên bản được ghim”;
+
+/* No comment provided by engineer. */
+“Plug-Ins” = “Plug-Ins”;
+
+/* No comment provided by engineer. */
+“Prefer Main Executable” = “Thích thực thi chính”;
+
+/* No comment provided by engineer. */
+“Rebuild Icon Cache” = “Rebuild Icon Cache”;
+
+/* No comment provided by engineer. */
+“Search Patched…” = “Tìm kiếm đã được vá…”;
+
+/* No comment provided by engineer. */
+“Search…” = “Tìm Kiếm…”;
+
+/* No comment provided by engineer. */
+“Show in Filza” = “Hiển thị ở Filza”;
+
+/* No comment provided by engineer. */
+“Show Patched Only” = “Chỉ hiển thị các bản vá”;
+
+/* No comment provided by engineer. */
+“Some plug-ins were not injected by TrollFools, please eject them with caution.” = “Một số Plug-Ins không được TrollFools đưa vào, vui lòng gỡ bỏ chúng một cách thận trọng.”;
+
+/* No comment provided by engineer. */
+“Source Code” = “Mã nguồn”;
+
+/* No comment provided by engineer. */
+“TrollFools” = “TrollFools”;
+
+/* No comment provided by engineer. */
+“TrollRecorder” = “TrollRecorder”;
+
+/* No comment provided by engineer. */
+“TrollStore Applications” = “Ứng dụng TrollStore”;
+
+/* No comment provided by engineer. */
+“Unlock Version” = “Phiên bản mở khóa”;
+
+/* No comment provided by engineer. */
+“Use Weak Reference” = “Sử dụng tham chiếu yếu”;
+
+/* No comment provided by engineer. */
+“User Applications” = “Ứng dụng người dùng”;
+
+/* No comment provided by engineer. */
+“You need to rebuild the icon cache in TrollStore to apply changes.” = “Bạn cần xây dựng lại bộ đệm biểu tượng trong TrollStore để áp dụng các thay đổi.”;
+
+/* No comment provided by engineer. */
+
+“huami Add some features” = “huami Thêm một số tính năng, Việt Hoá bởi CG Gió 🇻🇳”;
+
+/* No comment provided by engineer. */
+“Name (A-Z)” = “Tên (A-Z)”;
+
+/* No comment provided by engineer. */
+“Name (Z-A)” = “Tên (Z-A)”;
+
+/* No comment provided by engineer. */
+“Switch to Default Icon” = “Chuyển sang biểu tượng mặc định”;
+
+/* No comment provided by engineer. */
+“All” = “Tất Cả”;
+
+/* No comment provided by engineer. */
+“User” = “Người Dùng”;
+
+/* No comment provided by engineer. */
+“Troll” = “Troll”;
+
+/* No comment provided by engineer. */
+“System” = “Hệ Thống”;
