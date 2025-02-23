@@ -18,7 +18,7 @@ struct AppListCell: View {
     @State var isInjectingConfiguration: Bool = false
     @State var latestBackupURL: URL?
 
-    @available(iOS 15.0, *)
+    @available(iOS 15, *)
     var highlightedName: AttributedString {
         let name = app.name
         var attributedString = AttributedString(name)
@@ -28,7 +28,7 @@ struct AppListCell: View {
         return attributedString
     }
 
-    @available(iOS 15.0, *)
+    @available(iOS 15, *)
     var highlightedId: AttributedString {
         let id = app.id
         var attributedString = AttributedString(id)
@@ -101,11 +101,11 @@ struct AppListCell: View {
 
     @ViewBuilder
     var cellContextMenuWrapper: some View {
-        if #available(iOS 16.0, *) {
+        if #available(iOS 16, *) {
             // iOS 16
             cellContextMenu
         } else {
-            if #available(iOS 15.0, *) { }
+            if #available(iOS 15, *) { }
             else {
                 // iOS 14
                 cellContextMenu
@@ -115,8 +115,8 @@ struct AppListCell: View {
 
     @ViewBuilder
     var cellBackground: some View {
-        if #available(iOS 15.0, *) {
-            if #available(iOS 16.0, *) { }
+        if #available(iOS 15, *) {
+            if #available(iOS 16, *) { }
             else {
                 // iOS 15
                 Color.clear
@@ -132,13 +132,20 @@ struct AppListCell: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(uiImage: app.alternateIcon ?? app.icon ?? UIImage())
-                .resizable()
-                .frame(width: 32, height: 32)
+            if #available(iOS 15, *) {
+                Image(uiImage: app.alternateIcon ?? app.icon ?? UIImage())
+                    .resizable()
+                    .frame(width: 32, height: 32)
+            } else {
+                Image(uiImage: app.alternateIcon ?? app.icon ?? UIImage())
+                    .resizable()
+                    .frame(width: 32, height: 32)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 4) {
-                    if #available(iOS 15.0, *) {
+                    if #available(iOS 15, *) {
                         Text(highlightedName)
                             .font(.headline)
                             .lineLimit(1)
@@ -158,7 +165,7 @@ struct AppListCell: View {
                     }
                 }
 
-                if #available(iOS 15.0, *) {
+                if #available(iOS 15, *) {
                     Text(highlightedId)
                         .font(.subheadline)
                         .lineLimit(1)

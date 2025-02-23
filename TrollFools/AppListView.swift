@@ -36,7 +36,40 @@ struct AppListView: View {
     """, appNameString, appVersionString, NSLocalizedString("Copyright", comment: ""), currentYear, NSLocalizedString("Made with ♥ by OwnGoal Studio", comment: ""), NSLocalizedString("@huamidev Add some features", comment: ""), "TG：@huamidev")
     }
 
-    let repoURL = URL(string: "https://github.com/Lessica/TrollFools")
+    let repoURL = URL(string: "https://github.com/Lessica/TrollFools")!
+
+    func filteredAppList(_ apps: [App]) -> some View {
+        ForEach(apps, id: \.id) { app in
+            NavigationLink {
+                if appList.isSelectorMode, let selectorURL = appList.selectorURL {
+                    InjectView(app, urlList: [selectorURL])
+                } else {
+                    OptionView(app)
+                }
+            } label: {
+                if #available(iOS 16, *) {
+                    AppListCell(app: app)
+                } else {
+                    AppListCell(app: app)
+                        .padding(.vertical, 4)
+                }
+            }
+        }
+    }
+
+    var advertisementButton: some View {
+        Button {
+            UIApplication.shared.open(App.advertisementApp.url)
+        } label: {
+            if #available(iOS 16, *) {
+                AppListCell(app: App.advertisementApp)
+            } else {
+                AppListCell(app: App.advertisementApp)
+                    .padding(.vertical, 4)
+            }
+        }
+        .foregroundColor(.primary)
+    }
 
     var appListFooterView: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -50,6 +83,25 @@ struct AppListView: View {
             } label: {
                 Text(NSLocalizedString("Source Code", comment: ""))
                     .font(.footnote)
+            }
+        }
+    }
+
+    var appListFooter: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if !appList.filter.showPatchedOnly {
+                Text(NSLocalizedString("Only removable system applications are eligible and listed.", comment: ""))
+                    .font(.footnote)
+            }
+
+            if !appList.isSelectorMode {
+                if #available(iOS 16, *) {
+                    appListFooterView
+                        .padding(.top, 8)
+                } else {
+                    appListFooterView
+                        .padding(.top, 2)
+                }
             }
         }
     }
@@ -75,7 +127,7 @@ struct AppListView: View {
                             Spacer()
 
                             if appList.isRebuilding {
-                                if #available(iOS 16.0, *) {
+                                if #available(iOS 16, *) {
                                     ProgressView()
                                         .progressViewStyle(CircularProgressViewStyle())
                                         .controlSize(.large)
@@ -205,7 +257,7 @@ struct AppListView: View {
                         appList.performFilter()
                     }
                 } label: {
-                    if #available(iOS 15.0, *) {
+                    if #available(iOS 15, *) {
                         Image(systemName: appList.filter.showPatchedOnly 
                               ? "line.3.horizontal.decrease.circle.fill"
                               : "line.3.horizontal.decrease.circle")
@@ -221,7 +273,7 @@ struct AppListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if #available(iOS 15.0, *) {
+                if #available(iOS 15, *) {
                     // iOS 15 及以上的搜索框和功能
                     VStack {
                         // 分类列
