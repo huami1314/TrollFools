@@ -33,13 +33,13 @@ struct AppListView: View {
     %@ %@ %@ © %d
     %@
     %@
-    """, appNameString, appVersionString, NSLocalizedString("Copyright", comment: ""), currentYear, NSLocalizedString("Made with ♥ by OwnGoal Studio", comment: ""), NSLocalizedString("@huamidev Add some features", comment: ""), "TG：@huamidev")
+    """, appNameString, appVersionString, NSLocalizedString("Copyright", comment: ""), currentYear, NSLocalizedString("Made with ♥ by OwnGoal Studio", comment: ""), NSLocalizedString("@huamidev Add some features", comment: ""), "TG：@huamidev")
     }
 
-    let repoURL = URL(string: "https://github.com/Lessica/TrollFools")!
+    let repoURL = URL(string: "https://github.com/Lessica/TrollFools")
 
     func filteredAppList(_ apps: [App]) -> some View {
-        ForEach(apps, id: \.id) { app in
+        ForEach(apps) { app in
             NavigationLink {
                 if appList.isSelectorMode, let selectorURL = appList.selectorURL {
                     InjectView(app, urlList: [selectorURL])
@@ -57,32 +57,18 @@ struct AppListView: View {
         }
     }
 
-    var advertisementButton: some View {
-        Button {
-            UIApplication.shared.open(App.advertisementApp.url)
-        } label: {
-            if #available(iOS 16, *) {
-                AppListCell(app: App.advertisementApp)
-            } else {
-                AppListCell(app: App.advertisementApp)
-                    .padding(.vertical, 4)
-            }
-        }
-        .foregroundColor(.primary)
-    }
-
     var appListFooterView: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(appString)
                 .font(.footnote)
 
-            Button {
-                if let repoURL {
+            if let repoURL = repoURL {
+                Button {
                     UIApplication.shared.open(repoURL)
+                } label: {
+                    Text(NSLocalizedString("Source Code", comment: ""))
+                        .font(.footnote)
                 }
-            } label: {
-                Text(NSLocalizedString("Source Code", comment: ""))
-                    .font(.footnote)
             }
         }
     }
