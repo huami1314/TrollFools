@@ -76,7 +76,7 @@ fi
 
 # Write the control file
 cat > ../control << __EOF__
-Package: com.huami.TrollFools3
+Package: wiki.qaq.trollfools
 Name: TrollFools
 Version: $VERSION-$new_build_number
 Section: Applications

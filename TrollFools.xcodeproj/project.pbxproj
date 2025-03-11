@@ -677,7 +677,7 @@
 					"CURRENT_PROJECT_VERSION=\\\"$(CURRENT_PROJECT_VERSION)\\\"",
 				);
 				MARKETING_VERSION = $DEBUG_VERSION;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools3CLI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFoolsCLI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -702,7 +702,7 @@
 					"CURRENT_PROJECT_VERSION=\\\"$(CURRENT_PROJECT_VERSION)\\\"",
 				);
 				MARKETING_VERSION = $VERSION;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools3CLI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFoolsCLI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -876,7 +876,7 @@
 					"$(PROJECT_DIR)/TrollFools",
 				);
 				MARKETING_VERSION = $DEBUG_VERSION;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools33;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -924,7 +924,7 @@
 					"$(PROJECT_DIR)/TrollFools",
 				);
 				MARKETING_VERSION = $VERSION;
-				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools33;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huami.TrollFools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
