@@ -7,10 +7,10 @@
 		<dict>
 			<key>CFBundleTypeName</key>
 			<string>Mach-O Binary</string>
-			<key>LSHandlerRank</key>
-			<string>Default</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.apple.mach-o-binary</string>
@@ -19,10 +19,10 @@
 		<dict>
 			<key>CFBundleTypeName</key>
 			<string>Sileo Deb Package</string>
-			<key>LSHandlerRank</key>
-			<string>Default</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>org.debian.deb-archive</string>
@@ -37,10 +37,10 @@
 				<string>public.archive</string>
 				<string>public.data</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>org.debian.deb-archive</string>
 			<key>UTTypeIconFiles</key>
 			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>org.debian.deb-archive</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

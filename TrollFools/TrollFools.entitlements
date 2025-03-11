@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>GXZ23M5TP2.com.huami.TrollFools</string>
+	<string>6LMF23FAGL.com.huami.TrollFools3</string>
 	<key>checklessPersistentURLTranslation</key>
 	<true/>
 	<key>com.apple.AutoWake-write-access</key>
@@ -29,7 +29,7 @@
 	<true/>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
-		<string>6LMF23FAGL.iCloud.com.huami.TrollFools.icloud-container</string>
+		<string>6LMF23FAGL.iCloud.com.huami.TrollFools3.icloud-container</string>
 	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>
@@ -38,10 +38,10 @@
 	<key>com.apple.developer.notificationcenter-identifiers</key>
 	<true/>
 	<key>com.apple.developer.team-identifier</key>
-	<string>GXZ23M5TP2</string>
+	<string>6LMF23FAGL</string>
 	<key>com.apple.developer.ubiquity-container-identifiers</key>
 	<array>
-		<string>6LMF23FAGL.iCloud.com.huami.TrollFools.icloud-container</string>
+		<string>6LMF23FAGL.iCloud.com.huami.TrollFools3.icloud-container</string>
 	</array>
 	<key>com.apple.frontboard.launchapplications</key>
 	<true/>
@@ -64,7 +64,7 @@
 		<key>type</key>
 		<string>bundleID</string>
 		<key>value</key>
-		<string>com.huami.TrollFools</string>
+		<string>com.huami.TrollFools3</string>
 	</dict>
 	<key>com.apple.private.coreservices.canmaplsdatabase</key>
 	<true/>
@@ -177,8 +177,8 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>com.huami.TrollFools</string>
-		<string>6LMF23FAGL.com.huami.TrollFools</string>
+		<string>com.huami.TrollFools3</string>
+		<string>6LMF23FAGL.com.huami.TrollFools3</string>
 	</array>
 	<key>platform-application</key>
 	<true/>
