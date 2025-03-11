@@ -38,7 +38,7 @@
 "Continue" = "继续";
 
 /* No comment provided by engineer. */
-"Continue and Don’t Show Again" = "继续且不再提示";
+"Continue and Don't Show Again" = "继续且不再提示";
 
 /* StripedTextTableViewController */
 "Copy" = "拷贝";
@@ -209,10 +209,16 @@
 "TrollFools" = "TrollFools";
 
 /* No comment provided by engineer. */
+"All" = "全部应用";
+
+/* No comment provided by engineer. */
+"All Applications" = "全部应用";
+
+/* No comment provided by engineer. */
 "TrollRecorder" = "巨魔录音机";
 
 /* No comment provided by engineer. */
-"TrollStore" = "巨魔商店应用";
+"TrollStore" = "巨魔应用";
 
 /* No comment provided by engineer. */
 "TrollStore Applications" = "巨魔商店应用";

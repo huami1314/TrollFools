@@ -54,7 +54,7 @@ struct AppListView: View {
             format: appStringFormat,
             appNameString, appVersionString,
             NSLocalizedString("Copyright", comment: ""),
-            NSLocalizedString("Made with ♥ by OwnGoal Studio", comment: "")
+            NSLocalizedString("Made with ♥ by OwnGoal Studio", comment: "")
         )
     }
 
@@ -75,7 +75,7 @@ struct AppListView: View {
                         selectorOpenedURL = result
                         isWarningHidden = true
                     } label: {
-                        Text(NSLocalizedString("Continue and Don’t Show Again", comment: ""))
+                        Text(NSLocalizedString("Continue and Don't Show Again", comment: ""))
                     }
                     Button(role: .cancel) {
                         temporaryOpenedURL = nil
@@ -145,6 +145,7 @@ struct AppListView: View {
                     .refreshable {
                         appList.reload()
                     }
+                    .gesture(swipeGesture)
             } else {
                 searchableListView
                     .introspect(.list, on: .iOS(.v14)) { tableView in
@@ -161,7 +162,44 @@ struct AppListView: View {
                             }()
                         }
                     }
+                    .gesture(swipeGesture)
             }
+        }
+    }
+
+    var swipeGesture: some Gesture {
+        DragGesture(minimumDistance: 50, coordinateSpace: .local)
+            .onEnded { value in
+                let horizontalAmount = value.translation.width
+                let verticalAmount = value.translation.height
+                
+                if abs(horizontalAmount) > abs(verticalAmount) {
+                    withAnimation {
+                        if horizontalAmount < 0 {
+                            let currentRawValue = appList.activeScope.rawValue
+                            if currentRawValue < Scope.allCases.count - 1 {
+                                let nextRawValue = currentRawValue + 1
+                                switchToScope(Scope(rawValue: nextRawValue) ?? .all)
+                            }
+                        } else {
+                            let currentRawValue = appList.activeScope.rawValue
+                            if currentRawValue > 0 {
+                                let prevRawValue = currentRawValue - 1
+                                switchToScope(Scope(rawValue: prevRawValue) ?? .all)
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+    private func switchToScope(_ scope: Scope) {
+        appList.activeScope = scope
+        
+        searchViewModel.searchScopeIndex = scope.rawValue
+        
+        DispatchQueue.main.async {
+            searchViewModel.searchController?.searchBar.selectedScopeButtonIndex = scope.rawValue
         }
     }
 
@@ -176,19 +214,19 @@ struct AppListView: View {
                 appList.filter.searchKeyword = $0
             }
             .onReceive(searchViewModel.$searchScopeIndex) {
-                appList.activeScope = Scope(rawValue: $0) ?? .user
+                appList.activeScope = Scope(rawValue: $0) ?? .all
             }
             .introspect(.viewController, on: .iOS(.v14, .v15, .v16, .v17)) { viewController in
                 if searchViewModel.searchController == nil {
-                    viewController.navigationItem.hidesSearchBarWhenScrolling = true
+                    viewController.navigationItem.hidesSearchBarWhenScrolling = false
                     viewController.navigationItem.searchController = {
                         let searchController = UISearchController(searchResultsController: nil)
                         searchController.searchResultsUpdater = searchViewModel
                         searchController.obscuresBackgroundDuringPresentation = false
-                        searchController.hidesNavigationBarDuringPresentation = true
-                        searchController.automaticallyShowsScopeBar = false
+                        searchController.hidesNavigationBarDuringPresentation = false
+                        searchController.automaticallyShowsScopeBar = true
                         if #available(iOS 16, *) {
-                            searchController.scopeBarActivation = .manual
+                            searchController.scopeBarActivation = .onSearchActivation
                         }
                         setupSearchBar(searchController: searchController)
                         return searchController
@@ -205,6 +243,8 @@ struct AppListView: View {
             }
 
             switch appList.activeScope {
+            case .all:
+                allAppGroup.transition(.opacity)
             case .user:
                 userAppGroup.transition(.opacity)
             case .troll:
@@ -255,6 +295,25 @@ struct AppListView: View {
     }
 
     var userAppGroup: some View {
+        Group {
+            if !appList.filter.isSearching && !appList.filter.showPatchedOnly && !appList.isRebuildNeeded && appList.unsupportedCount > 0 {
+                Section {
+                } footer: {
+                    paddedHeaderFooterText(String(format: NSLocalizedString("And %d more unsupported user applications.", comment: ""), appList.unsupportedCount))
+                }
+            }
+
+            if #available(iOS 15, *) {
+                if shouldShowAdvertisement {
+                    advertisementSection
+                }
+            }
+
+            appSections
+        }
+    }
+
+    var allAppGroup: some View {
         Group {
             if !appList.filter.isSearching && !appList.filter.showPatchedOnly && !appList.isRebuildNeeded && appList.unsupportedCount > 0 {
                 Section {

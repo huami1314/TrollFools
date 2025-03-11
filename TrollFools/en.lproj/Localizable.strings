@@ -38,7 +38,7 @@
 "Continue" = "Continue";
 
 /* No comment provided by engineer. */
-"Continue and Don’t Show Again" = "Continue and Don’t Show Again";
+"Continue and Don't Show Again" = "Continue and Don't Show Again";
 
 /* StripedTextTableViewController */
 "Copy" = "Copy";
@@ -213,6 +213,12 @@
 
 /* No comment provided by engineer. */
 "TrollStore" = "TrollStore";
+
+/* No comment provided by engineer. */
+"All" = "All";
+
+/* No comment provided by engineer. */
+"All Applications" = "All Applications";
 
 /* No comment provided by engineer. */
 "TrollStore Applications" = "TrollStore Applications";

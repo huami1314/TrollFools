@@ -15,16 +15,23 @@ struct IndexableScroller: View {
     @GestureState private var dragLocation: CGPoint = .zero
 
     var body: some View {
-        HStack {
-            VStack(spacing: 0) {
-                ForEach(indexes, id: \.self) { index in
-                    Text(index)
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.accentColor)
-                        .padding(.trailing, 12)
-                        .background(dragObserver(index))
+        GeometryReader { geometry in
+            HStack {
+                VStack(spacing: 0) {
+                    ForEach(indexes, id: \.self) { index in
+                        Text(index)
+                            .font(.caption2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.blue.opacity(0.6))
+                            .padding(.trailing, 12)
+                            .frame(width: 30, alignment: .center)
+                            .background(dragObserver(index))
+                    }
                 }
+                .frame(height: geometry.size.height)
+                .frame(maxHeight: .infinity, alignment: .center)
+                
+                Spacer()
             }
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .global)
@@ -32,8 +39,6 @@ struct IndexableScroller: View {
                         state = value.location
                     }
             )
-
-            Spacer()
         }
     }
 

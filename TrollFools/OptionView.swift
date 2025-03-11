@@ -46,7 +46,7 @@ struct OptionView: View {
                         isImporterSelected = true
                         isWarningHidden = true
                     } label: {
-                        Text(NSLocalizedString("Continue and Don’t Show Again", comment: ""))
+                        Text(NSLocalizedString("Continue and Don't Show Again", comment: ""))
                     }
                     Button(role: .cancel) {
                         temporaryResult = nil

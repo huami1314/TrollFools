@@ -38,7 +38,7 @@
 "Continue" = "Continue";
 
 /* TODO */
-"Continue and Don’t Show Again" = "Continue and Don’t Show Again";
+"Continue and Don't Show Again" = "Continue and Don't Show Again";
 
 /* No comment provided by engineer. */
 "Copy" = "Sao chép";
@@ -210,6 +210,12 @@
 
 /* No comment provided by engineer. */
 "TrollRecorder" = "TrollRecorder";
+
+/* No comment provided by engineer. */
+"All" = "Tất cả";
+
+/* No comment provided by engineer. */
+"All Applications" = "Tất cả ứng dụng";
 
 /* No comment provided by engineer. */
 "TrollStore" = "TrollStore";

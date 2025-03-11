@@ -1,5 +1,4 @@
 {
-  "originHash" : "e332d5628073e9668a5966a1002a42edf6469c8e9393f2dc4fba34b3e9d2c438",
   "pins" : [
     {
       "identity" : "ararchivekit",
@@ -92,5 +91,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

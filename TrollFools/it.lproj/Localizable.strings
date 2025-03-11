@@ -38,7 +38,7 @@
 "Continue" = "Continue";
 
 /* TODO */
-"Continue and Don’t Show Again" = "Continue and Don’t Show Again";
+"Continue and Don't Show Again" = "Continue and Don't Show Again";
 
 /* StripedTextTableViewController */
 "Copy" = "Copia";
@@ -210,6 +210,12 @@
 
 /* No comment provided by engineer. */
 "TrollRecorder" = "TrollRecorder";
+
+/* No comment provided by engineer. */
+"All" = "Tutti";
+
+/* No comment provided by engineer. */
+"All Applications" = "Tutte le Applicazioni";
 
 /* No comment provided by engineer. */
 "TrollStore" = "TrollStore";
